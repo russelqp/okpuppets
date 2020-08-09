@@ -1,0 +1,22 @@
+.catalogo{
+    max-width: 1200px;
+    margin: 0 auto;
+    .catalogo__articulos{
+        margin: 0 auto;
+        max-width: 1200px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+        figure{
+            width: 100%;
+            text-align: center;
+            img{
+                width: 100%;
+            }
+            h3{
+                color: #09f;
+            }
+        }
+    }
+}

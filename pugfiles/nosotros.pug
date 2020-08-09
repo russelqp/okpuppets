@@ -1,0 +1,26 @@
+-//Variables de META, deben ir en cada página y editar según la información del la página actual, agregar cuentas de facebook según la fanpage
+-var meta_titlePage ="Nosotros - Ok Puppets";
+-var meta_canonica = "";
+-var meta_descPage = "";
+-var meta_keyWordsPage = "";
+-var meta_ogImage = "";
+
+<!DOCTYPE html>
+html(lang="es")
+    head
+        include inc/head.pug
+    body
+        header
+            include inc/nav_principal.pug
+        .container
+            section.welcome
+                h2 Quienes somos
+                p Ok Puppets es una idea de una persona como tú, qu busca la manera de realizar una las tantas cosas que le gusta, combinado con tecnologías y ofrecer un servicio nuevo y diferente. 
+            section.contacto
+                .buzon
+                    button 
+                        a(href="mailto:buzon@okpuppets.com" title="Escribe a nuestro buzón") Escribenos
+                    .buzon__contenerimg
+                        img(src="images/svg/buzon_closed.svg" alt="imagen de buzon cerrado" class="buzon_cerrado")
+                        img(src="images/svg/buzon_open.svg" alt="imagen de buzon abierto" class="buzon_abierto")
+        include inc/footer.pug
