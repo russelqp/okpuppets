@@ -60,27 +60,99 @@ header{
             }
         }
     }
+    
+    .menu-icon{
+        right: 10vw;
+        font-size: 32px;
+        border-radius: 10px;
+        padding: 4px;
+        background-color: #5536B3;
+        border-radius: 15px;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        line-height: 32px;
+        text-align: center;
+        position: fixed;
+        z-index: 10;
+        top: 25px;
+        margin: 0;
+        transition: .5s ease;
+    }
+
+    .tache-icon{
+        right: 10vw;
+        font-size: 32px;
+        border-radius: 10px;
+        padding: 4px;
+        background-color: #5536B3;
+        border-radius: 15px;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        line-height: 32px;
+        text-align: center;
+        position: fixed;
+        z-index: 10;
+        top: 25px;
+        margin: 0;
+        transition: .5s ease;
+        transform: scale(0);
+    }
         
-    ul{
-        display: flex;
-        justify-content: space-between;
-        color: #fff;
-        font-size: 1.2rem;
-        list-style: none;
-        li{
-            margin: 10px;
-            a{
-                color: #fff;
-                text-decoration: none;
-                transition: all 0.5s ease;
-                padding: 10px;
-                border-radius: 15px;
-            }
-            a:hover{
-                background-color: #f2cf18;
+    nav{
+        .menu{
+            display: flex;
+            justify-content: space-between;
+            color: #fff;
+            font-size: 1.2rem;
+            list-style: none;
+            transition: 0.5 ease;
+            li{
+                margin: 10px;
+                a{
+                    color: #fff;
+                    text-decoration: none;
+                    transition: all 0.5s ease;
+                    padding: 10px;
+                    border-radius: 15px;
+                }
+                a:hover{
+                    background-color: #f2cf18;
+                }
             }
         }
+        .menu2{
+            right: -100vw;
+            transition: .5s ease;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            margin: 0;
+            z-index: 1;
+            width: 50vw;
+            background-color: rgba(216,87,75,.8);
+            box-shadow: -1px -1px 2px 2px rgba(20,20,20,.5);
+            li{
+                margin: 10px;
+                a{
+                    color: #fff;
+                    text-decoration: none;
+                    transition: all 0.5s ease;
+                    padding: 5px;
+                    border-radius: 10px;
+                }
+                a:hover{
+                    background-color: #f2cf18;
+                }
+            }
+        }
+        .is-active {
+            right: 0;
+            display: block;
+         }
     }
+    
 }
 .container{
     width: 100%;
@@ -91,9 +163,9 @@ header{
     margin: 0 auto;
     .textos_principales{
         position: absolute;
-        top: 100px;
+        top: 10%;
         bottom: 0;
-        left: 100px;
+        left: 0;
         right: 0;
         margin:auto;
         max-width: 1200px;
@@ -111,7 +183,7 @@ header{
         width: 100%;
         margin: 0 auto;
         img{
-            width: -webkit-fill-available;
+            width: 100%;
         }
     }
        
@@ -120,11 +192,13 @@ header{
 .welcome{
     max-width: 1200px;
     margin: 0 auto;
+    padding: 15px;
     p{
         max-width: 1000px;
     }
 }
 .ideas{
+    padding: 15px;
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
@@ -167,7 +241,6 @@ header{
         grid-template-rows: 1fr 1fr;
         max-width: 1200px;
         width: 100vw;
-        height: 100%;
         justify-content: center;
         align-items: center;
         button{
@@ -192,6 +265,7 @@ header{
             grid-row: 1/3;
             align-self: end;
             transition: .5s ease;
+            width: 400px;
             img{
                 width: 100%;
                 vertical-align: bottom;

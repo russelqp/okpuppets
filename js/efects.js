@@ -1,13 +1,26 @@
 
 //Ocultar / Mostrar Menu
-const menu = document.querySelector('.menu');
+const tablet = window.matchMedia('screen and (max-width:890px)');
+const menu = document.querySelector('.menu2');
 const burgerButton = document.querySelector('.menu-icon');
 const tache_button = document.querySelector('.tache-icon');
 
 burgerButton.addEventListener('click', hideShow);
 tache_button.addEventListener('click', hideShow);
- 
- function hideShow(){
+
+function validation(event){
+  if (event.matches){
+    burgerButton.style.transform ='scale(1)';
+    burgerButton.addEventListener('click', hideShow);
+    tache_button.addEventListener('click', hideShow);
+  }else{
+    burgerButton.removeEventListener('click', hideShow);
+    tache_button.removeEventListener('click', hideShow);
+    burgerButton.style.transform ='scale(0)';
+  }
+}
+
+function hideShow(){
   if (menu.classList.contains('is-active')){
     menu.classList.remove('is-active');
     burgerButton.style.transform = "scale(1)";
@@ -18,6 +31,15 @@ tache_button.addEventListener('click', hideShow);
     tache_button.style.transform = "scale(1)";
   }
  }
+
+tablet.addListener(validation);
+validation(tablet);
+
+
+
+
+ 
+
  
 //Variables para botones y secciones
 let btn_logo = document.querySelector(".logo");

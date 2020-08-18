@@ -1,2 +1,0 @@
-# okpuppets
-Puupets Store
