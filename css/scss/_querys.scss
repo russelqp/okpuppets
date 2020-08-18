@@ -37,12 +37,13 @@
             }
         }
     }
-
-    .catalogo .catalogo__articulos{
-        grid-template-columns: repeat(2, 1fr);     
+    .container .catalogo{
+        .catalogo__articulos{
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
-    
 }
+
 @media screen and (max-width:700px){
     .banner{
         display: grid;
@@ -87,6 +88,11 @@
                 grid-row: 2/3;
                 grid-column: 1/2;
             }
+        }
+    }
+    .container .catalogo{
+        .catalogo__articulos{
+            grid-template-columns: 1fr;
         }
     }
 }

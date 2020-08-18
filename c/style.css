@@ -273,8 +273,25 @@ footer {
     width: initial; }
   .contacto .buzon .buzon__contenerimg {
     width: initial; }
-  .container .catalogo .catalogo__articulos {
-    grid-template-columns: repeat(2, 1fr); } }
+  .container .catalogo {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px; }
+    .container .catalogo .catalogo__articulos {
+      margin: 0 auto;
+      max-width: 1200px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px; }
+      .container .catalogo .catalogo__articulos figure {
+        width: 100%;
+        text-align: center; }
+        .container .catalogo .catalogo__articulos figure img {
+          width: 100%; }
+        .container .catalogo .catalogo__articulos figure h3 {
+          color: #fff;
+          background-color: #ed7064; } }
 
 @media screen and (max-width: 700px) {
   .banner {
@@ -304,9 +321,7 @@ footer {
     .contacto .buzon .buzon__contenerimg {
       width: initial;
       grid-row: 2/3;
-      grid-column: 1/2; }
-  .container .catalogo .catalogo__articulos {
-    grid-template-columns: 1fr; } }
+      grid-column: 1/2; } }
 
 @media screen and (max-width: 450px) {
   .top_nav a .logo {
@@ -315,22 +330,22 @@ footer {
     .top_nav a .logo img {
       max-width: 100px; } }
 
-.catalogo {
+.container .catalogo {
   max-width: 1200px;
   margin: 0 auto;
   padding: 15px; }
-  .catalogo .catalogo__articulos {
+  .container .catalogo .catalogo__articulos {
     margin: 0 auto;
     max-width: 1200px;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px; }
-    .catalogo .catalogo__articulos figure {
+    .container .catalogo .catalogo__articulos figure {
       width: 100%;
       text-align: center; }
-      .catalogo .catalogo__articulos figure img {
+      .container .catalogo .catalogo__articulos figure img {
         width: 100%; }
-      .catalogo .catalogo__articulos figure h3 {
+      .container .catalogo .catalogo__articulos figure h3 {
         color: #fff;
         background-color: #ed7064; }
