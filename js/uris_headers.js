@@ -30,7 +30,7 @@ function la_url(){
             as[e].setAttribute('href', a_viejo+'/')
         }else{
             as[e].setAttribute('href', mi_url+'/'+a_viejo)
-            console.log(a_viejo)
+            //console.log(a_viejo)
         }
     }
 
