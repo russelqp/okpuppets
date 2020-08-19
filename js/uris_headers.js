@@ -26,7 +26,7 @@ function la_url(){
 
     for(e=0; e<as.length;e++){
         var a_viejo = as[e].getAttribute("href");
-        if(a_viejo.includes("http://") || a_viejo.includes("https://")){
+        if(a_viejo.includes("http://") || a_viejo.includes("https://") || a_viejo.includes("mailto")){
             as[e].setAttribute('href', a_viejo+'/')
         }else{
             as[e].setAttribute('href', mi_url+'/'+a_viejo)
