@@ -3,15 +3,15 @@ function la_url(){
     let barras = "//";
     let mi_host = window.location.host;
     let mi_path = window.location.pathname;
-    let laraiz = "/okpuppets";
+    let laraiz = "/okpuppets/public";
     let mi_url_local = protocolo+barras+mi_host+laraiz;
     let mi_url_online = protocolo+barras+mi_host;
     //let mi_url = mi_url_local;
     let imgs = document.querySelectorAll('img');
     let as = document.querySelectorAll('a');
 
- 
-    if(mi_path.includes("okpuppets")){
+ console.log(mi_path)
+    if(mi_path.includes("okpuppets/public")){
         mi_url = mi_url_local;
     }else{
         mi_url = mi_url_online;
