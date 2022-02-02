@@ -10,7 +10,7 @@ function myRecaptch(){
   let validado = grecaptcha.getResponse();
   if (validado.length != 0){
     console.log("Validado");
-    document.querySelector('.contact-form').action = "/";
+    document.querySelector('.contact-form').action = "index.html";
     document.querySelector('.contact-form').submit();
   }else{
       stat.style.color  = "red"

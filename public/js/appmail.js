@@ -44,34 +44,35 @@ function saveContactInfo(name, phone, email, message){
   retrieveInfos();
 }
 
+
 // Reetrieve Infos
 
-function retrieveInfos(){
-  let ref = firebase.database().ref("infos")
-  ref.on("value", gotData);
-}
+// function retrieveInfos(){
+//   let ref = firebase.database().ref("infos")
+//   ref.on("value", gotData);
+// }
 
 
-function gotData(data){
-  let info = data.val();
-  let keys = Object.keys(info);
+// function gotData(data){
+//   let info = data.val();
+//   let keys = Object.keys(info);
   
-  for (let i = 0; i < keys.length; i++){
-    let d = keys[i];
-    let name = info[d].name;
-    let phone = info[d].phone;
-    let email = info[d].email;
-    let message = info[d].message;
+//   for (let i = 0; i < keys.length; i++){
+//     let d = keys[i];
+//     let name = info[d].name;
+//     let phone = info[d].phone;
+//     let email = info[d].email;
+//     let message = info[d].message;
     
-    console.log(name, phone, email, message)
-    let info_results = document.querySelector(".infos-results");
-    info_results.innerHTML += `<div>
-    <p class=""><strong>Name: </strong> ${name} </br>
-    <strong>Phone: </strong> ${phone} </br>
-    <a class=""><strong>Email: </strong> ${email} </a> </br>
-    <a class=""><strong>Message: </strong> ${message} </a>
-    </p>
-    </div>`;
+//     console.log(name, phone, email, message)
+//     let info_results = document.querySelector(".infos-results");
+//     info_results.innerHTML += `<div>
+//     <p class=""><strong>Name: </strong> ${name} </br>
+//     <strong>Phone: </strong> ${phone} </br>
+//     <a class=""><strong>Email: </strong> ${email} </a> </br>
+//     <a class=""><strong>Message: </strong> ${message} </a>
+//     </p>
+//     </div>`;
     
-  }
-}
+//   }
+// }
