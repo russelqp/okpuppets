@@ -1,0 +1,24 @@
+
+<script>
+  let status = document.querySelector('.status')
+  
+  let captcha = document.querySelector('.g-recaptcha');
+    
+  // captcha.addEventListener('click', () => {
+  // 	//
+  // });
+  function myRecaptch(){
+    //e.preventDefault();
+    let validado = grecaptcha.getResponse();
+    if (validado.length != 0){
+      console.log("Validado");
+      document.querySelector('.contact-form').action = "app/send.php";
+      document.querySelector('.contact-form').submit();
+  }else{
+      status.style.color  = "red"
+      status.innerHTML = "Debes validar el captcha";
+      status.style.display = "block";
+  }
+    
+  }
+</script>

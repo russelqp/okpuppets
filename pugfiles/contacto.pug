@@ -5,22 +5,32 @@
 -var meta_keyWordsPage = "contacto, ok puppets, marionetas digitales, puppet digital.";
 -var meta_ogImage = "https://www.okpuppets.com/images/svg/buzon_closed.svg";
 
--var js_urls = "../js/uris_headers.js";
+-var js_urls = " /js/uris_headers.js";
 -var js_efects = "../js/efects.js";
+-var js_appmail = "../js/appmail.js";
+-var js_val_form = "../js/validation_form.js";
+-var js_captcha_code = "../js/captcha_code.js";
 
 <!DOCTYPE html>
 html(lang="es")
     head
         include inc/head.pug
+        script(src="https://www.google.com/recaptcha/api.js" async defer)
+        script(src="https://www.gstatic.com/firebasejs/8.9.1/firebase.js")
+        script(src="https://www.gstatic.com/firebasejs/8.9.1/firebase-storage.js")
+        
+        script.
+            let dir_app_send = "../js/appmail.js";
     body
         header
             include inc/nav_principal.pug
         .container
             section.contacto
-                .buzon
-                    button 
-                        a(href="mailto:buzon@okpuppets.com" title="Escribe a nuestro buzón") Escribenos
-                    .buzon__contenerimg
-                        img(src="images/svg/buzon_closed.svg" alt="imagen de buzon cerrado" class="buzon_cerrado")
-                        img(src="images/svg/buzon_open.svg" alt="imagen de buzon abierto" class="buzon_abierto")
+                //- .buzon
+                //-     button 
+                //-         a(href="mailto:buzon@okpuppets.com" title="Escribe a nuestro buzón") Escribenos
+                //-     .buzon__contenerimg
+                //-         img(src="images/svg/buzon_closed.svg" alt="imagen de buzon cerrado" class="buzon_cerrado")
+                //-         img(src="images/svg/buzon_open.svg" alt="imagen de buzon abierto" class="buzon_abierto")
+                include inc/form_contact.pug
         include inc/footer.pug

@@ -19,5 +19,11 @@
   "bugs": {
     "url": "https://github.com/russelqp/okpuppets/issues"
   },
-  "homepage": "https://github.com/russelqp/okpuppets#readme"
+  "homepage": "https://github.com/russelqp/okpuppets#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.0.18"
+  },
+  "dependencies": {
+    "firebase": "^9.6.5"
+  }
 }

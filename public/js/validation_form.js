@@ -2,12 +2,6 @@ function validar(){
     let form = document.form; 
     let alerta = document.querySelector('.alerta');
 
-    
-    
-
-    
-    
-
     if(form.username.value == 0){
         let mensaje_alert = "Debes escribir tu nombre";
         alerta.innerHTML = '<div class="alert alert-danger"> <span class="close" data-dismiss="alert"> &times; </span><span>'+mensaje_alert+'</span></div>';

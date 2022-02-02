@@ -1,0 +1,29 @@
+.contener_form(class="w-full m-auto")
+  form(method="post" class="contact-form w-2/3 p-8 m-auto bg-cyan-500" onsubmit="myRecaptch(); return false")
+    .alerta
+    //- Agregar patter y required después de terminar el script de appmail
+    ol(class="w-full m-auto p-4")
+      li(class="flex m-auto w-full p-4") 
+        label(for="username")
+        br
+        input(type="text" name="username" class="username w-full leading-7 p-4" maxlength="15"  placeholder="Nombre" required)
+      li(class="flex m-auto w-full p-4") 
+        label(for="useremail" class="")
+        input(type="email" name="useremail" class="useremail w-full leading-7 p-4" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required)
+      li(class="flex m-auto w-full p-4") 
+        label(for="usertel" required)
+        br
+        input(type="phone" name="usertel" class="usertel w-full leading-7 p-4" placeholder="Teléfono" required)
+      li(class="flex m-auto w-full p-4") 
+        label(for="mensaje")
+        br
+        textarea(name="mensaje" class="mensaje w-full leading-7 p-4" cols="30" rows="10" placeholder="Escribe tu mensaje")
+      
+      div(class="g-recaptcha flex m-auto w-full p-4" data-sitekey="6LeSRFAeAAAAAI_VDDxbcYS7rYJO7JQhgx6JQVIB")
+      
+      li(class="status-recaptcha flex m-auto w-full p-4")
+      
+      li(class="flex m-auto w-full p-4")
+        input(type="submit" value="Enviar" class=" w-full leading-7 p-4 bg-purple-800 rounded-md" name="submit").btn_enviar
+
+  div(class="infos-results")
