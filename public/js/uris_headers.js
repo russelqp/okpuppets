@@ -31,14 +31,14 @@ function la_url(){
     } */
     if(mi_path.includes("okpuppets")||mi_path.includes("public")){
         mi_url = mi_url_local;
-        console.log("mi url con issdonline es " + mi_url)
+        //console.log("mi url con issdonline es " + mi_url)
        
     }else if(mi_host.includes(5500) || mi_host.includes(5501)){
         mi_url = protocolo+barras+mi_host+ "/public"; 
-        console.log("mi url con 5500 es " + mi_url)
+        //console.log("mi url con 5500 es " + mi_url)
     }else{
         mi_url = mi_url_online;
-        console.log("mi url con online es" + mi_url)
+        //console.log("mi url con online es" + mi_url)
     }
         
    
@@ -58,11 +58,23 @@ function la_url(){
     for(e=0; e<as.length;e++){
         var a_viejo = as[e].getAttribute("href");
         if(a_viejo.includes("http://") || a_viejo.includes("https://")){
-            as[e].setAttribute('href', a_viejo)
-           console.log("incluye http " + "host viejo es " +  a_viejo)
+            if(a_viejo.includes("mailto:buzon")){
+                as[e].setAttribute('href', 'mailto:buzon@okpuppets.com')
+                 
+            }else{
+                as[e].setAttribute('href', a_viejo)
+            }
+            //console.log("incluye http " + "host viejo es " +  a_viejo)
+            
+          
         }else{
+            if(a_viejo.includes("mailto:buzon")){
+                as[e].setAttribute('href', 'mailto:buzon@okpuppets.com')
+                 
+            }else{
             as[e].setAttribute('href', mi_url+'/'+a_viejo)
-            console.log("no incluye http " + "host viejo es " +mi_url+'/'+a_viejo)
+            }
+            //console.log("no incluye http " + "host viejo es " +mi_url+'/'+a_viejo)
         }
     }
 

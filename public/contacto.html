@@ -20,7 +20,7 @@
     <script src="https://www.google.com/recaptcha/api.js" async="async" defer="defer"></script>
     <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-storage.js"></script>
-    <script>let dir_app_send = js_appmail;</script>
+    <script>let dir_app_send = "../js/appmail.js";</script>
   </head>
   <body>
     <header>
@@ -49,35 +49,11 @@
         <h2 class="text-3xl font-semibold my-6">Contáctanos</h2>
         <p class="m-auto lg:text-2xl lg:leading-9">Estamos para ayudarte, escribenos para trrabajar contigo.</p>
         <section class="contacto">
-          <div class="contener_form w-full m-auto">
-            <form class="contact-form md:w-2/3 p-8 m-auto bg-cyan-500" method="post" onsubmit="myRecaptch(); return false">
-              <div class="alerta"></div>
-              <ol class="w-full m-auto p-4">
-                <li class="flex m-auto w-full p-4"> 
-                  <label for="username"></label><br/>
-                  <input class="username w-full leading-7 p-4" type="text" name="username" maxlength="15" placeholder="Nombre" required="required"/>
-                </li>
-                <li class="flex m-auto w-full p-4"> 
-                  <label for="useremail"></label>
-                  <input class="useremail w-full leading-7 p-4" type="email" name="useremail" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$" required="required"/>
-                </li>
-                <li class="flex m-auto w-full p-4"> 
-                  <label for="usertel" required="required"></label><br/>
-                  <input class="usertel w-full leading-7 p-4" type="phone" name="usertel" placeholder="Teléfono" required="required"/>
-                </li>
-                <li class="flex m-auto w-full p-4"> 
-                  <label for="mensaje"></label><br/>
-                  <textarea class="mensaje w-full leading-7 p-4" name="mensaje" cols="30" rows="10" placeholder="Escribe tu mensaje"></textarea>
-                </li>
-                <div class="g-recaptcha flex m-auto w-full p-4" data-sitekey="6LeSRFAeAAAAAI_VDDxbcYS7rYJO7JQhgx6JQVIB"></div>
-                <li class="status-recaptcha flex m-auto w-full p-4"></li>
-                <li class="flex m-auto w-full p-4">
-                  <input class=" w-full leading-7 p-4 bg-purple-800 rounded-md btn_enviar" type="submit" value="Enviar" name="submit"/>
-                </li>
-              </ol>
-            </form>
-            <div class="infos-results"></div>
+          <div class="buzon">
+            <button> <a href="mailto:buzon@okpuppets.com" title="Escribe a nuestro buzón">Escribenos</a></button>
+            <div class="buzon__contenerimg"><img class="buzon_cerrado" src="images/svg/buzon_closed.svg" alt="imagen de buzon cerrado"/><img class="buzon_abierto" src="images/svg/buzon_open.svg" alt="imagen de buzon abierto"/></div>
           </div>
+          <!--_ para usar este form el sitio debe de estar en firinclude inc/form_contact.pug-->
         </section>
       </section>
     </div>

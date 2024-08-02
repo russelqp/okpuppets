@@ -21,7 +21,7 @@ html(lang="es")
 
         
         script.
-            let dir_app_send = js_appmail;
+            let dir_app_send = "../js/appmail.js";
     body
         header
             include inc/nav_principal.pug
@@ -30,11 +30,11 @@ html(lang="es")
                 h2(class="text-3xl font-semibold my-6") Contáctanos
                 p(class="m-auto lg:text-2xl lg:leading-9") Estamos para ayudarte, escribenos para trrabajar contigo.
                 section.contacto
-                    //- .buzon
-                    //-     button 
-                    //-         a(href="mailto:buzon@okpuppets.com" title="Escribe a nuestro buzón") Escribenos
-                    //-     .buzon__contenerimg
-                    //-         img(src="images/svg/buzon_closed.svg" alt="imagen de buzon cerrado" class="buzon_cerrado")
-                    //-         img(src="images/svg/buzon_open.svg" alt="imagen de buzon abierto" class="buzon_abierto")
-                    include inc/form_contact.pug
+                    .buzon
+                        button 
+                            a(href="mailto:buzon@okpuppets.com" title="Escribe a nuestro buzón") Escribenos
+                        .buzon__contenerimg
+                            img(src="images/svg/buzon_closed.svg" alt="imagen de buzon cerrado" class="buzon_cerrado")
+                            img(src="images/svg/buzon_open.svg" alt="imagen de buzon abierto" class="buzon_abierto")
+                    //_ para usar este form el sitio debe de estar en firinclude inc/form_contact.pug
         include inc/footer.pug
