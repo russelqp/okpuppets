@@ -15,10 +15,10 @@ html(lang="es")
     body
         header
             include inc/nav_principal.pug
-        .container
+        .my_container
             section.catalogo
-                h2 Catálogo de Puppets
-                p Hemos creado algunos diseños para que puedas comenzar en tus proyectos, escribenos a nuestro #[a(href="https://www.okpuppets.com/contacto" title="buzón de contacto") buzón] para mayores informes.
+                h2(class="text-3xl font-semibold my-6") Catálogo de Puppets
+                p(class="m-auto lg:text-2xl lg:leading-9") Hemos creado algunos diseños para que puedas comenzar en tus proyectos, escribenos a nuestro #[a(href="https://www.okpuppets.com/contacto" title="buzón de contacto") buzón] para mayores informes.
                 section.catalogo__articulos
                     figure
                         img(src="images/puppets/categorias/gratuito/monster-cuernitos-puppets-adobe-character-animation-ok-puppets.png", alt="puppet cuernitos")

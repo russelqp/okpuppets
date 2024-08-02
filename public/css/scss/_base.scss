@@ -155,7 +155,7 @@ header{
     }
     
 }
-.container{
+.my_container{
     width: 100%;
     margin: 0 auto;
 }
@@ -224,17 +224,18 @@ header{
             }
         }
         p{
-            width: 90%;
+            width: 100%;
+            padding: 36px;
         }
 
     }
 }
 .contacto{
-    height: 100vh;
     background-color: #0cf;
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
+    width: 100%;
     .buzon{
         margin: 0 auto;
         display: grid;
