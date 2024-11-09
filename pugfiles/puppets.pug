@@ -5,11 +5,10 @@
 -var meta_keyWordsPage = "diseño, puppets digitales, mounstrito, chef, personajes, character afcter efects.";
 -var meta_ogImage = "https://www.okpuppets.com/images/puppets/categorias/gratuito/monster-cuernitos-puppets-adobe-character-animation-ok-puppets.png";
 //-VAriables para scripts en footer
--var js_urls = "../js/uris_headers.js";
--var js_efects = "../js/efects.js";
+-var js_analitycs = "js/analitycs.js";
+-var js_efects = "js/efects.js";
 
-<!DOCTYPE html>
-html(lang="es")
+include inc/ini.pug
     head
         include inc/head.pug
     body
@@ -21,19 +20,14 @@ html(lang="es")
                 p(class="m-auto lg:text-2xl lg:leading-9") Hemos creado algunos diseños para que puedas comenzar en tus proyectos, escribenos a nuestro #[a(href="https://www.okpuppets.com/contacto" title="buzón de contacto") buzón] para mayores informes.
                 section.catalogo__articulos
                     figure
-                        img(src="images/puppets/categorias/gratuito/monster-cuernitos-puppets-adobe-character-animation-ok-puppets.png", alt="puppet cuernitos")
+                        img(src=Myurl+"images/puppets/categorias/gratuito/monster-cuernitos-puppets-adobe-character-animation-ok-puppets.png", alt="puppet cuernitos")
                         h3 Puppet Cuernitos
                     figure
-                        img(src="images/puppets/categorias/gratuito/puppets_para_videos_explicativos.png", alt="puppet cerdito godin")
+                        img(src=Myurl+"images/puppets/categorias/gratuito/puppets_para_videos_explicativos.png", alt="puppet cerdito godin")
                         h3 Puppet Cerdito Godin
                     figure
-                        img(src="images/puppets/categorias/gratuito/cheff-solovino-puppets-adobe-character-animation-after-efects-galaxia-ideas.png", alt="puppet chef")
+                        img(src=Myurl+"images/puppets/categorias/gratuito/cheff-solovino-puppets-adobe-character-animation-after-efects-galaxia-ideas.png", alt="puppet chef")
                         h3 Puppet Cheff
             section.contacto
-                .buzon
-                    button 
-                        a(href="mailto:buzon@okpuppets.com" title="Escribe a nuestro buzón") Escribenos
-                    .buzon__contenerimg
-                        img(src="images/svg/buzon_closed.svg" alt="imagen de buzon cerrado" class="buzon_cerrado")
-                        img(src="images/svg/buzon_open.svg" alt="imagen de buzon abierto" class="buzon_abierto")
+                include inc/contacto_min.pug
         include inc/footer.pug

@@ -5,11 +5,10 @@
 -var meta_keyWordsPage = "nosotros, puppets, okpuppets, marionetas, afterefects, emprendimiento, playa del carmen, riviera maya, tulum";
 -var meta_ogImage = "https://www.okpuppets.com/images/ideas/puppets_para_videos_explicativos.jpg";
 //-Variables para scripts en el footer
--var js_urls = "../js/uris_headers.js";
+-var js_analitycs = "js/analitycs.js";
 -var js_efects = "../js/efects.js";
 
-<!DOCTYPE html>
-html(lang="es")
+include inc/ini.pug
     head
         include inc/head.pug
     body
@@ -20,10 +19,5 @@ html(lang="es")
                 h2(class="text-3xl font-semibold my-6") Quienes somos
                 p(class="m-auto lg:text-2xl lg:leading-9") Ok Puppets nació como una idea de diseñar y crear puppets (marionetas) para poder ser aprovechados en proyectos de animación, ya sea en After efects o en Adobe Character animator, nuestros personajes agregaran ese toque original y divertido a tus animaciones. Pueden servir para una gran variedad de propósitos, desde animaciones cortas de entretenimiento, anuncions, cursos, etcétera.  
             section.contacto
-                .buzon
-                    button 
-                        a(href="mailto:buzon@okpuppets.com" title="Escribe a nuestro buzón") Escribenos
-                    .buzon__contenerimg
-                        img(src="images/svg/buzon_closed.svg" alt="imagen de buzon cerrado" class="buzon_cerrado")
-                        img(src="images/svg/buzon_open.svg" alt="imagen de buzon abierto" class="buzon_abierto")
+                include inc/contacto_min.pug
         include inc/footer.pug
