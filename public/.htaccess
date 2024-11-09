@@ -5,6 +5,8 @@
 <IfModule mod_rewrite.c>
 RewriteEngine on
 
+RewriteCond %{HTTP_HOST} ^okpuppets.com [NC]
+RewriteRule ^(.*)$ https://www.okpuppets.com/$1 [L,R=301]
 #RewriteCond %{REQUEST_FILENAME} !-d
 #RewriteCond %{REQUEST_FILENAME}.php -f
 #RewriteRule ^(.*)$ $1.php
