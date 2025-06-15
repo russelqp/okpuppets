@@ -1,0 +1,17 @@
+---
+
+//-- Url de enlaces y archivos
+const Url = function(){
+	if(import.meta.env.SITE){
+		return import.meta.env.SITE;
+	}else{
+		return "/";
+	}
+}
+const myUrl = Url();
+---
+<footer>
+	<section class="creditos">
+        <h5>&copy; 2025 Okpuppets.com By <a href="https://www.galaxiaideas.com" title="Estudio Creativo" target="_blank">Galaxiaideas</a></h5>
+    </section>
+</footer>

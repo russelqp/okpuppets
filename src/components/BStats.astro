@@ -1,0 +1,40 @@
+
+<section class="container_full extra_padding_top extra_padding_bottom">
+    <section>
+        <article class="flex gap-x-8 justify-between">
+            <div class="bg-purple-950 text-center p-8 flex flex-col">
+                <i class="icon-count">⭐</i>
+                <span class="nun_count" data-val="200">000</span>
+                <span>Clientes satisfechos<span>
+            </div>
+            <div class="bg-purple-800 text-center p-8 flex flex-col">
+                <i class="icon-count">⭐</i>
+                <span class="nun_count" data-val="300">000</span>
+                <span>Páginas web realizadas<</span>
+            </div>
+            <div class="bg-purple-900 text-center p-8 flex flex-col">
+                <i class="icon-count">⭐</i>
+                <span class="nun_count" data-val="5">00</span>
+                <span>Aaños de experiencia</span>
+            </div>
+         </article>
+    </section>
+</section>
+
+<script>
+    let valueDisplays = document.querySelectorAll(".nun_count");
+    let interval = 5000;
+
+    valueDisplays.forEach((valueDisplay) =>{
+        let startValue = 0;
+        let  endValue = parseInt(valueDisplay.getAttribute("data-val"));
+        let duration = Math.floor(interval / endValue);
+        let counter = setInterval(function () {
+            startValue += 1;
+            valueDisplay.textContent = startValue;
+            if (startValue == endValue){
+                clearInterval(counter)
+            }
+        })
+    })
+</script>

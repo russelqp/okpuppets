@@ -1,0 +1,44 @@
+---
+import type { propsToFilename } from "astro/assets/utils"
+const { titlePage, Meta_keywords, Meta_description, Meta_og_url, Meta_og_image, Meta_og_image_alt, Meta_canonical, Meta_autor, og_titlePage, css_main, css_nasa, css_animate } = Astro.props
+
+import '/src/styles/global.css'
+
+//-- Url de enlaces y archivos
+const Url = function(){
+	if(import.meta.env.SITE){
+		return import.meta.env.SITE;
+	}else{
+		return "/";
+	}
+}
+const myUrl = Url();
+
+---
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" sizes="16x16" href=`${myUrl}images/favicon-16x16.png` />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="keywords" content={Meta_keywords} />
+		<meta name="description" content={Meta_description} />
+		<meta property="fb:admins" content=""/>
+		<meta property="fb:app_id" content=""/>
+		<meta property="og:url" content={Meta_og_url}/>
+		<meta property="og:type" content="website"/>
+		<meta property="og:title" content={og_titlePage}/>
+		<meta property="og:description" content={Meta_description}/>
+		<meta property="og:image" content={Meta_og_image}/>
+		<meta property="og:image:alt" content={Meta_og_image_alt}/>
+		<meta name="robots" content="follow"/>
+		<link rel="canonical" href={Meta_canonical}/>
+		<link rel="author" href={Meta_autor} />
+		<link rel="stylesheet" href={css_main} />
+		<title>{titlePage}</title>
+	</head>
+	<body>
+        <slot />
+	</body>
+</html>

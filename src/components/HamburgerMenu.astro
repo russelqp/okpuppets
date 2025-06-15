@@ -1,0 +1,43 @@
+<div class="hamburger_btns"><i class="menu-icon icofont-navigation-menu"></i><i class="tache-icon icofont-close"></i></div>
+
+
+<script>
+//Ocultar / Mostrar Menu
+const menu = document.querySelector('.menu');
+const burgerButton = document.querySelector('.menu-icon');
+const tache_button = document.querySelector('.tache-icon');
+var botones = menu.querySelectorAll('a');
+
+
+botones.forEach(boton => {
+  boton.addEventListener('click', hideMenu)
+})
+
+burgerButton.addEventListener('click', hideShow);
+tache_button.addEventListener('click', hideShow);
+ 
+ function hideShow(e){
+   e.preventDefault();
+  if (menu.classList.contains('is-active')){
+    menu.classList.remove('is-active');
+    burgerButton.style.display = "flex";
+    tache_button.style.display = "none";
+    burgerButton.style.transform = "scale(1)";
+    tache_button.style.transform = "scale(0)";
+  }else{
+    burgerButton.style.display = "none";
+    tache_button.style.display = "flex";
+    menu.classList.add('is-active');
+    burgerButton.style.transform = "scale(0)";
+    tache_button.style.transform = "scale(1)";
+  }
+ }
+
+  function hideMenu(){
+    menu.classList.remove('is-active');
+    burgerButton.style.display = "flex";
+    tache_button.style.display = "none";
+    burgerButton.style.transform = "scale(1)";
+    tache_button.style.transform = "scale(0)";
+ }
+</script>
