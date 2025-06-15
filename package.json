@@ -1,29 +1,14 @@
 {
   "name": "okpuppets",
-  "version": "1.0.0",
-  "description": "Sitio web que ofrece el servicio de diseño de puppets digitales",
-  "main": "index.js",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/russelqp/okpuppets.git"
-  },
-  "keywords": [
-    "digital",
-    "puppets"
-  ],
-  "author": "russelqp",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/russelqp/okpuppets/issues"
-  },
-  "homepage": "https://github.com/russelqp/okpuppets#readme",
-  "devDependencies": {
-    "tailwindcss": "^3.0.18"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "firebase": "^9.6.5"
+    "astro": "^5.9.3"
   }
 }
