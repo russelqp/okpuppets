@@ -1,6 +1,16 @@
-<section class="contacto">
+---
+const Url = function(){
+	if(import.meta.env.SITE){
+		return import.meta.env.SITE;
+	}else{
+		return "/";
+	}
+}
+const myUrl = Url();
+---
+<section class="contacto py-10">
     <div class="buzon">
         <button> <a href="mailto:buzon@okpuppets.com" title="Escribe a nuestro buzón">Escribenos</a></button>
-        <div class="buzon__contenerimg"><img class="buzon_cerrado" src="images/svg/buzon_closed.svg" alt="imagen de buzon cerrado"/><img class="buzon_abierto" src="images/svg/buzon_open.svg" alt="imagen de buzon abierto"/></div>
+        <div class="buzon__contenerimg"><img class="buzon_cerrado" src=`${myUrl}images/svg/buzon_closed.svg` alt="imagen de buzon cerrado"/><img class="buzon_abierto" src=`${myUrl}images/svg/buzon_open.svg` alt="imagen de buzon abierto"/></div>
     </div>
 </section>

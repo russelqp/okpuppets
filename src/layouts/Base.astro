@@ -1,7 +1,9 @@
 ---
 import type { propsToFilename } from "astro/assets/utils"
 const { titlePage, Meta_keywords, Meta_description, Meta_og_url, Meta_og_image, Meta_og_image_alt, Meta_canonical, Meta_autor, og_titlePage, css_main, css_nasa, css_animate } = Astro.props
-
+import Footer from "../components/Footer.astro"
+import Header from '../components/Header.astro';
+import BtnUp from "../components/BtnUp.astro" 
 import '/src/styles/global.css'
 
 //-- Url de enlaces y archivos
@@ -37,8 +39,14 @@ const myUrl = Url();
 		<link rel="author" href={Meta_autor} />
 		<link rel="stylesheet" href={css_main} />
 		<title>{titlePage}</title>
+		<link rel="sitemap" href="https://www.okpuppets/sitemap-index.xml" />
 	</head>
 	<body>
-        <slot />
+		<Header />
+		<main>
+			<slot />
+		</main>  
+		<Footer />
+		<BtnUp />
 	</body>
 </html>

@@ -1,22 +1,33 @@
+---
+//-- Url de enlaces y archivos
+const Url = function(){
+	if(import.meta.env.SITE){
+		return import.meta.env.SITE;
+	}else{
+		return "/";
+	}
+}
+const myUrl = Url();
+---
 <div class="top_nav">
-    <a href="/" title=""> 
-        <div class="logo"><img src="images/logo_principal_ok_puppets.png" alt="Logo Ok Puppets"/>
-            <h1><span></span>OK Puppets</h1>
+    <a href=`${myUrl}` title="Ok Puppets Home"> 
+        <div class="logo"><img src=`${myUrl}images/logo_principal_ok_puppets.png` alt="Logo Ok Puppets"/>
+            <span>OKPuppets</span>
         </div>
     </a>
     <i class="menu-icon icofont-navigation-menu"></i><i class="tache-icon icofont-ui-close"></i>
     <nav>
         <ul class="menu">
-            <li> <a href="" title="Página de inicio">Inicio</a></li>
-            <li> <a href="nosotros/" title="Página Nosotros">Nosotros</a></li>
-            <li> <a href="puppets/" title="Página Catálogo">Puppets</a></li>
-            <li> <a href="contacto/" title="Página de Contacto">Contacto</a></li>
+            <li> <a href=`${myUrl}` title="Página de inicio">Inicio</a></li>
+            <li> <a href=`${myUrl}puppets/` title="Página Catálogo">Puppets</a></li>
+            <li> <a href=`${myUrl}faq/` title="Preguntas frecuentes sobre puppets digitales">FAQ Puppets</a></li>
+            <li> <a href=`${myUrl}contacto/` title="Página de Contacto">Contacto</a></li>
         </ul>
         <ul class="menu2">
-            <li> <a href="" title="Página de inicio">Inicio</a></li>
-            <li> <a href="nosotros/" title="Página Nosotros">Nosotros</a></li>
-            <li> <a href="puppets/" title="Página Catálogo">Puppets</a></li>
-            <li> <a href="contacto/" title="Página de Contacto">Contacto</a></li>
+            <li> <a href=`${myUrl}` title="Página de inicio">Inicio</a></li>
+            <li> <a href=`${myUrl}puppets/` title="Página Catálogo">Puppets</a></li>
+            <li> <a href=`${myUrl}faq/` title="Preguntas frecuentes sobre puppets digitales">FAQ Puppets</a></li>
+            <li> <a href=`${myUrl}contacto/` title="Página de Contacto">Contacto</a></li>
         </ul>
     </nav>
 </div>

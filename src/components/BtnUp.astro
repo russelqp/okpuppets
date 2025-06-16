@@ -3,7 +3,7 @@
     const _header = document.querySelector("header");
     const btnUp = function() {
         let btn_up = document.createElement('i');
-        btn_up.setAttribute('class', 'icofont-rounded-up btn_up' )
+        btn_up.setAttribute('class', 'icofont-arrow-up btn_up' )
         btn_up.addEventListener('click', scrollUp);
 
         function scrollUp(){
@@ -20,10 +20,10 @@
         //console.log('scroll ' + scroll_mov)
         if (scroll_mov > 100){
             btn_up.style.transform = "scale(1)";
-            _header.style.background = "rgba(12, 1, 13, 0.8)";
+            //_header.style.background = "rgba(12, 1, 13, 0.8)";
         }else if(scroll_mov < 100){
             btn_up.style.transform = "scale(0)";
-            _header.style.background = "none";
+            //_header.style.background = "none";
         }
         }
         let footer = document.querySelector('footer');

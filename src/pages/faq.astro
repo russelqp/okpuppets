@@ -1,0 +1,122 @@
+---
+import BaseLayout from '../layouts/Base.astro';
+import { ClientRouter } from 'astro:transitions';
+import FaqPuppets from '../components/FaqPuppets.astro';
+
+const Url = function(){
+	if(import.meta.env.SITE){
+		return import.meta.env.SITE;
+	}else{
+		return "/";
+	}
+}
+const myUrl = Url();
+
+---
+<script type="application/ld+json">
+	{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué es un puppet digital?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un puppet digital es un personaje ilustrado y riggeado para ser animado en software como Adobe Character Animator o After Effects. Puede reaccionar al movimiento, voz o teclado."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué software necesito para usar puppets digitales?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Principalmente Adobe Character Animator, Adobe Illustrator y Adobe After Effects si deseas mayor control en la postproducción y animaciones complejas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo crear mis propios puppets desde cero?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, puedes dibujarlos en Adobe Illustrator o Photoshop siguiendo una estructura de capas específicas, y luego importarlos a Character Animator."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Dónde puedo descargar puppets ya hechos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Existen recursos gratuitos y pagos en sitios como Adobe Stock, Okay Samurai, AnimationGuides o Envato Elements."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuál es la diferencia entre un puppet para Character Animator y uno para After Effects?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los puppets de Character Animator son interactivos y responden en tiempo real; los de After Effects son más manuales, pero ofrecen más control de efectos y composiciones."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué formato deben tener los archivos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Usualmente .AI o .PSD para los diseños, y se integran en Character Animator como puppets con extensiones .puppet o dentro del proyecto."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo se riggea un puppet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El rigging se realiza nombrando correctamente las capas y definiendo puntos de control, comportamientos y manejadores en Character Animator."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Necesito conocimientos avanzados en ilustración?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No es necesario, pero tener una base ayuda mucho. También puedes modificar plantillas existentes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo sincronizar la voz con el movimiento de boca?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, Character Animator tiene reconocimiento automático de voz para hacer lip sync. También se puede hacer manualmente cuadro por cuadro en After Effects."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Se puede usar un puppet en transmisiones en vivo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, Character Animator permite transmisiones en vivo usando puppets que reaccionan en tiempo real mediante webcam, micrófono y teclado."
+      }
+    }
+  ]
+}
+</script>
+<BaseLayout 
+	titlePage="Faq Ok Puppets" 
+	Meta_keywords="puppets, after efects, puppets digitales, marionetas, character animator" 
+	Meta_description="Puppets para adobe character animator y para after efects, personajes para tus proyectos de animación." 
+	Meta_og_url=`${myUrl}faq/`
+	Meta_og_image=`${myUrl}images/og_images/og_image_faq.webp`
+	Meta_og_image_alt="puppes_adobe_image"
+	Meta_canonical=`${myUrl}faq/`
+	Meta_autor="https://www.galaxiaideas.com"
+	og_titlePage="Faq Ok Puppets"
+>
+
+    <section id="main_container" class="main_container">
+      <div class="my_container w-full">
+        <FaqPuppets />
+      </div>
+    </section>
+</BaseLayout>
+<script is:inline src=`${myUrl}js/efects.js`></script>

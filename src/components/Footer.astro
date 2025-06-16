@@ -1,5 +1,5 @@
 ---
-
+import BtnUp from "../components/BtnUp.astro" 
 //-- Url de enlaces y archivos
 const Url = function(){
 	if(import.meta.env.SITE){
@@ -10,8 +10,18 @@ const Url = function(){
 }
 const myUrl = Url();
 ---
-<footer>
+<footer class="flex flex-col py-20">
 	<section class="creditos">
         <h5>&copy; 2025 Okpuppets.com By <a href="https://www.galaxiaideas.com" title="Estudio Creativo" target="_blank">Galaxiaideas</a></h5>
     </section>
+	<section class="w-full flex mx-auto justify-center">
+		<ul class="p-10 mx-auto flex gap-8 w-full max-w-5xl place-content-between">
+			<li class="flex px-6 py-2 bg-yellow-300 justify-center mx-auto my-auto"><a href=`${myUrl}` title="página de inicio">Home</a></li>
+			<li class="flex px-6 py-2 bg-yellow-300 justify-center mx-auto my-auto"><a href=`${myUrl}puppets/` title="página de puppets">Puppets</a></li>
+			<li class="flex px-6 py-2 bg-yellow-300 justify-center mx-auto my-auto"><a href=`${myUrl}faq/` title="página de preguntas frecuentes">Faq</a></li>
+			<li class="flex px-6 py-2 bg-yellow-300 justify-center mx-auto my-auto"><a href=`${myUrl}nosotros/` title="página de nosotros">Nosotros</a></li>
+			<li class="flex px-6 py-2 bg-yellow-300 justify-center mx-auto my-auto"><a href=`${myUrl}contacto/` title="página de contacto">Contacto</a></li>
+		</ul>
+	</section>
 </footer>
+<BtnUp />

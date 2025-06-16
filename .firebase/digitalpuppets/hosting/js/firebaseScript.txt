@@ -1,0 +1,19 @@
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDPMF3w8vLBD-0YtknVfboDaUNZuCW7ar0",
+    authDomain: "digitalpuppets.firebaseapp.com",
+    projectId: "digitalpuppets",
+    storageBucket: "digitalpuppets.appspot.com",
+    messagingSenderId: "350735448588",
+    appId: "1:350735448588:web:aef5371d9c7c2ab8494c29"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>

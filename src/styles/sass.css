@@ -1,8 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 
 body {
   font-size: 16px;
@@ -14,7 +10,9 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 h1 {
-  font-size: 2.4rem;
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 6rem;
 }
 
 h2 {
@@ -65,8 +63,9 @@ header h1 {
   grid-column: 2/3;
   color: #3f917c;
 }
-.top_nav a .logo h1 span {
+.top_nav a .logo span {
   color: #fff;
+  font-size: 1.6rem;
 }
 .top_nav .menu-icon {
   right: 10vw;
@@ -160,11 +159,13 @@ header h1 {
 .my_container {
   width: 100%;
   margin: 0 auto;
+  padding: 25px 0px;
 }
 
 .banner {
   position: relative;
   margin: 0 auto;
+  padding: 25px 0px;
 }
 .banner .textos_principales {
   position: absolute;
@@ -176,11 +177,11 @@ header h1 {
   max-width: 1200px;
 }
 .banner .textos_principales h2 {
-  background-color: #f2cf18;
+  background-color: #f2ce18d9;
   line-height: 1.8rem;
   font-size: 2rem;
   width: fit-content;
-  padding: 15px;
+  padding: 20px 30px;
   color: #fff;
   margin: 20px;
 }
@@ -195,7 +196,7 @@ header h1 {
 .welcome {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 15px;
+  padding: 25px 0px;
 }
 .welcome p {
   max-width: 1000px;
@@ -239,6 +240,7 @@ header h1 {
   justify-content: center;
   align-items: center;
   width: 100%;
+  padding: 25px 0px;
 }
 .contacto .buzon {
   margin: 0 auto;

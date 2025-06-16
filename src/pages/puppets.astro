@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../layouts/Base.astro';
+import ContactForm from '../components/ContactForm.astro';
+import { ClientRouter } from 'astro:transitions';
+
+const Url = function(){
+	if(import.meta.env.SITE){
+		return import.meta.env.SITE;
+	}else{
+		return "/";
+	}
+}
+const myUrl = Url();
+
+---
+<BaseLayout 
+	titlePage="Puppets - Ok Puppets" 
+	Meta_keywords="diseño, puppets digitales, mounstrito, chef, personajes, character afcter efects." 
+	Meta_description="Diseño y venta de puppets para adobe character animator y after efects." 
+	Meta_og_url=`${myUrl}puppets/`
+	Meta_og_image=`${myUrl}images/og_images/og_image_puppets.webp`
+	Meta_og_image_alt="puppes_adobe_image"
+	Meta_canonical=`${myUrl}puppets/`
+	Meta_autor="https://www.galaxiaideas.com"
+	og_titlePage="Puppets - Ok Puppets"
+>
+
+	<section id="main_container" class="main_container">
+		<div class="my_container w-full">
+			<section class="catalogo py-6">
+				<h2 class="text-3xl font-semibold my-6">Catálogo de Puppets</h2>
+				<p class="m-auto lg:text-2xl lg:leading-9">Hemos creado algunos diseños para que puedas comenzar en tus proyectos, escribenos a nuestro <a href="https://www.okpuppets.com/contacto" title="buzón de contacto">buzón</a> para mayores informes.</p>
+				<section class="catalogo__articulos py-6">
+					<figure><img src=`${myUrl}images/puppets/categorias/gratuito/monster-cuernitos-puppets-adobe-character-animation-ok-puppets.png` alt="puppet cuernitos"/>
+						<h3>Puppet Cuernitos</h3>
+					</figure>
+					<figure><img src=`${myUrl}images/puppets/categorias/gratuito/puppets_para_videos_explicativos.png` alt="puppet cerdito godin"/>
+						<h3>Puppet Cerdito Godin</h3>
+					</figure>
+					<figure><img src=`${myUrl}images/puppets/categorias/gratuito/cheff-solovino-puppets-adobe-character-animation-after-efects-galaxia-ideas.png` alt="puppet chef"/>
+						<h3>Puppet Cheff</h3>
+					</figure>
+				</section>
+			</section>
+			<ContactForm />
+		</div>
+	</section>
+</BaseLayout>
+<script is:inline src=`${myUrl}js/efects.js`></script>

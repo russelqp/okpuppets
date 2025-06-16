@@ -7,14 +7,20 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "sass":"sass --watch src/sass/style.scss src/styles/sass.css"
+    "sass": "sass --watch src/sass/style.scss src/styles/sass.css"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.4.1",
     "@astrojs/tailwind": "^6.0.2",
     "@tailwindcss/vite": "^4.1.10",
     "astro": "^5.9.3",
+    "astro-robots-txt": "^1.0.0",
+    "firebase-tools": "^14.7.0",
     "lightningcss": "^1.30.1",
     "sass": "^1.89.2",
     "tailwindcss": "^4.1.10"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.16"
   }
 }

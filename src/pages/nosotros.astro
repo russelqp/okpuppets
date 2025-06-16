@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../layouts/Base.astro';
+import ContactForm from '../components/ContactForm.astro';
+import { ClientRouter } from 'astro:transitions';
+
+const Url = function(){
+	if(import.meta.env.SITE){
+		return import.meta.env.SITE;
+	}else{
+		return "/";
+	}
+}
+const myUrl = Url();
+
+---
+<BaseLayout 
+	titlePage="Nosotros - Ok Puppets" 
+	Meta_keywords="nosotros, puppets, okpuppets, marionetas, afterefects, emprendimiento, playa del carmen, riviera maya, tulum" 
+	Meta_description="Ok puppets, es un emprendimiento particular, de diseño y venta de puppets para afcert efects y adobe character animator." 
+	Meta_og_url=`${myUrl}nosotros/`
+	Meta_og_image=`${myUrl}images/og_images/og_image_nosotros.webp`
+	Meta_og_image_alt="puppes_adobe_image"
+	Meta_canonical=`${myUrl}nosotros/`
+	Meta_autor="https://www.galaxiaideas.com"
+	og_titlePage="Nosotros - Ok Puppets"
+>
+
+	<section id="main_container" class="main_container">
+		<div class="my_container w-full">
+			<section class="py-6">
+					<h2 class="text-3xl font-semibold my-6">Quienes somos</h2>
+				<p class="m-auto lg:text-2xl lg:leading-9">Ok Puppets nació como una idea de diseñar y crear puppets (marionetas) para poder ser aprovechados en proyectos de animación, ya sea en After efects o en Adobe Character animator, nuestros personajes agregaran ese toque original y divertido a tus animaciones. Pueden servir para una gran variedad de propósitos, desde animaciones cortas de entretenimiento, anuncions, cursos, etcétera.  </p>
+			</section>
+			<ContactForm />
+		</div>
+	</section>
+</BaseLayout>
+<script is:inline src=`${myUrl}js/efects.js`></script>
